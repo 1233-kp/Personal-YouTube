@@ -1,0 +1,16 @@
+{
+  "name": "kp-development",
+  "version": "1.0.0",
+  "description": "It is something like a Personal YouTube.",
+  "keywords": [
+    "Javascript",
+    "Backend"
+  ],
+  "license": "ISC",
+  "author": "Krishna Pandey",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
