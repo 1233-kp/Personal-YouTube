@@ -4,6 +4,7 @@
 import { DB_NAME } from "./constants.js";*/
 import dotenv from "dotenv";
 import connectToDatabase from "./db/index.js";
+import { app } from "./app.js";
 
 dotenv.config({
     path: "./.env"
@@ -11,12 +12,22 @@ dotenv.config({
 
 connectToDatabase()
 
+    .then(() => {
+        app.listen(process.env.PORT || 8000, () => {
+            console.log(`Server is running on port ${process.env.PORT || 8000}`);
+        });
+    })
+    .catch((error) => {
+        console.error("Error connecting to MongoDB:", error);
+        process.exit(1); // Exit the process with an error code
+    });
 
-
-
-
-
-
+/*
+app.on("error", (error) => {
+    console.error("Error starting the server:", error);
+    throw error;
+});
+*/
 
 /*
 import express from "express";
