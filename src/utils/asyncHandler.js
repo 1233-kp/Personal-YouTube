@@ -1,14 +1,14 @@
-const asyncHander = (requestHandler) => {
+const asyncHandler = (requestHandler) => {
     return (req, res, next) => {
         Promise.resolve(requestHandler(req, res, next)).catch(next);
     };
 };
 
-export { asyncHander }
+export { asyncHandler }
 
 
 /*
-const asyncHander = (fn) => {
+const asyncHandler = (fn) => {
     return async (req, res, next) => {
         try { 
             await fn(req, res, next);

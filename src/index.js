@@ -22,6 +22,8 @@ connectToDatabase()
         process.exit(1); // Exit the process with an error code
     });
 
+
+
 /*
 app.on("error", (error) => {
     console.error("Error starting the server:", error);
